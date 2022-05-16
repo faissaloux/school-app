@@ -16,4 +16,14 @@ class Student extends Model
         'parent_id',
         'bus_id',
     ];
+
+    public function parent()
+    {
+        return $this->belongsTo(Parents::class);
+    }
+
+    public function bus()
+    {
+        return $this->belongsTo(Bus::class);
+    }
 }

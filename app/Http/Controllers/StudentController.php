@@ -6,12 +6,15 @@ use App\Http\Requests\StoreStudentRequest;
 use App\Jobs\CreateStudent;
 use App\Models\Bus;
 use App\Models\Parents;
+use App\Models\Student;
 
 class StudentController extends Controller
 {
     public function index()
     {
-        return view('students.index');
+        $students = Student::get();
+
+        return view('students.index', compact('students'));
     }
 
     public function create()
