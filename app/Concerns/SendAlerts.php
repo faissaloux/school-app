@@ -16,6 +16,6 @@ trait SendAlerts
 
     private function sendAlert(string $type, string $msg)
     {
-        session([$type => trans($msg)]);
+        session()->flash($type, trans($msg));
     }
 }
