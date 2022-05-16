@@ -41,5 +41,7 @@ Route::middleware(['web', 'auth'])->group(function() {
         Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
         Route::post('/store', 'store')->name('store');
+        Route::get('/edit/{student}', 'edit')->name('edit');
+        Route::post('/update/{student}', 'update')->name('update');
     });
 });
