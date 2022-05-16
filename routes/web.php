@@ -25,6 +25,8 @@ Route::middleware(['web', 'auth'])->group(function() {
         Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
         Route::post('/store', 'store')->name('store');
+        Route::get('/edit/{parent}', 'edit')->name('edit');
+        Route::post('/update/{parent}', 'update')->name('update');
     });
 
     Route::controller(BusController::class)->prefix('/buses')->as('buses.')->group(function() {
