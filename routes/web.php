@@ -25,6 +25,8 @@ Route::middleware(['web', 'auth'])->group(function() {
     });
 
     Route::controller(BusController::class)->prefix('/buses')->as('buses.')->group(function() {
+        Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
+        Route::post('/store', 'store')->name('store');
     });
 });
