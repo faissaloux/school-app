@@ -21,7 +21,7 @@
             <li>
                 <a href="#"><span>{{ __('Teachers') }}</span> <i class="icon-people"></i></a>
                 <ul>
-                    <li><a href="form_components.html">{{ __('List teachers') }}</a></li>
+                    <li><a href="{{ route('teachers.index') }}">{{ __('List teachers') }}</a></li>
                     <li><a href="{{ route('teachers.create') }}">{{ __('Add new teacher') }}</a></li>
                 </ul>
             </li>

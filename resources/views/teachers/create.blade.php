@@ -1,5 +1,5 @@
 <x-app-layout>
-    <form method="POST" action="#">
+    <form method="POST" action="{{ route('teachers.store') }}">
         @csrf
 
         <div class="panel panel-default">
@@ -9,13 +9,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>{{ __('Name') }}:</label>
-                            <input type="text" name="name" placeholder="{{ __('Name') }}" class="form-control">
+                            <input type="text" name="name" placeholder="{{ __('Name') }}" class="form-control" value="{{ old('name') }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>{{ __('Email') }}:</label>
-                            <input type="email" name="email" placeholder="{{ __('Email') }}" class="form-control">
+                            <input type="email" name="email" placeholder="{{ __('Email') }}" class="form-control" value="{{ old('email') }}">
                         </div>
                     </div>
                 </div>
@@ -30,7 +30,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>{{ __('Password confirmation') }}:</label>
-                            <input type="text" name="password_confirmation" placeholder="{{ __('Password confirmation') }}" class="form-control">
+                            <input type="password" name="password_confirmation" placeholder="{{ __('Password confirmation') }}" class="form-control">
                         </div>
                     </div>
                 </div>

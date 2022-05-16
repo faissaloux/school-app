@@ -11,6 +11,8 @@ Route::middleware(['web', 'auth'])->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::controller(TeacherController::class)->prefix('/teachers')->as('teachers.')->group(function() {
+        Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
+        Route::post('/store', 'store')->name('store');
     });
 });
