@@ -6,6 +6,7 @@
     "Remember me": "Remember me",
     "Sign in": "Sign in",
     "Dashboard": "Dashboard",
+    "Welcome": "Welcome",
     "Teachers": "Teachers",
     "List teachers": "List teachers",
     "Add new teacher": "Add new teacher",
@@ -17,5 +18,6 @@
     "Add new student": "Add new student",
     "Buses": "Buses",
     "List buses": "List buses",
-    "Add new bus": "Add new bus"
+    "Add new bus": "Add new bus",
+    "Name": "Name"
 }

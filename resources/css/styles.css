@@ -1312,6 +1312,7 @@ body.boxed {
 .page-content {
   margin: 0 25px 0 265px;
   position: relative;
+  padding: 20px;
 }
 
 .sidebar-narrow .page-content {

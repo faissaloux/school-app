@@ -45,7 +45,6 @@
     </head>
 
     <body class="page-condensed">
-        <!-- Navbar -->
         <div class="navbar navbar-inverse" role="navigation">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Londinium"></a>
@@ -83,8 +82,13 @@
                 </li>
             </ul>
         </div>
-        <!-- /navbar -->
 
-        {{ $slot }}
+        <div class="page-container">
+            <x-sidebar />
+
+            <div class="page-content">
+                {{ $slot }}
+            </div>
+        </div>
     </body>
 </html>
