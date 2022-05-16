@@ -14,4 +14,9 @@ class Bus extends Model
     protected $fillable = [
         'teacher_id',
     ];
+
+    public function teacher()
+    {
+        return $this->belongsTo(Teacher::class);
+    }
 }

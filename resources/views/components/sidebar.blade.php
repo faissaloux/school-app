@@ -42,7 +42,7 @@
             <li>
                 <a href="#"><span>{{ __('Buses') }}</span> <i class="icon-tab"></i></a>
                 <ul>
-                    <li><a href="form_components.html">{{ __('Buses list') }}</a></li>
+                    <li><a href="{{ route('buses.index') }}">{{ __('Buses list') }}</a></li>
                     <li><a href="{{ route('buses.create') }}">{{ __('Add new bus') }}</a></li>
                 </ul>
             </li>

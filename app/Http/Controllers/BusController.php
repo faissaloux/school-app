@@ -4,13 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreBusRequest;
 use App\Jobs\CreateBus;
+use App\Models\Bus;
 use App\Models\Teacher;
 
 class BusController extends Controller
 {
     public function index()
     {
-        return view('buses.index');
+        $buses = Bus::get();
+
+        return view('buses.index', compact('buses'));
     }
 
     public function create()
