@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreTeacherRequest;
+use App\Http\Requests\UpdateTeacherRequest;
 use App\Jobs\CreateTeacher;
+use App\Jobs\UpdateTeacher;
 use App\Models\Teacher;
 
 class TeacherController extends Controller
@@ -32,5 +34,14 @@ class TeacherController extends Controller
     public function edit(Teacher $teacher)
     {
         return view('teachers.edit', compact('teacher'));
+    }
+
+    public function update(UpdateTeacherRequest $request, Teacher $teacher)
+    {
+        $this->dispatchSync(UpdateTeacher::fromRequest($teacher, $request));
+
+        $this->success('teacher.updated');
+
+        return redirect()->route('teachers.index');
     }
 }
