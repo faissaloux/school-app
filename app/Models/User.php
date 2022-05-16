@@ -35,4 +35,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Teacher::class);
     }
+
+    public function parent()
+    {
+        return $this->hasOne(Parents::class);
+    }
 }

@@ -1,5 +1,5 @@
 <x-app-layout>
-    <form method="POST" action="#">
+    <form method="POST" action="{{ route('parents.store') }}">
         @csrf
 
         <div class="panel panel-default">
