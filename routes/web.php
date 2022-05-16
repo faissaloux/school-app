@@ -17,6 +17,7 @@ Route::middleware(['web', 'auth'])->group(function() {
         Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
         Route::post('/store', 'store')->name('store');
+        Route::get('/edit/{teacher}', 'edit')->name('edit');
     });
 
     Route::controller(ParentController::class)->prefix('/parents')->as('parents.')->group(function() {

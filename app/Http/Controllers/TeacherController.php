@@ -28,4 +28,9 @@ class TeacherController extends Controller
 
         return redirect()->route('teachers.index');
     }
+
+    public function edit(Teacher $teacher)
+    {
+        return view('teachers.edit', compact('teacher'));
+    }
 }

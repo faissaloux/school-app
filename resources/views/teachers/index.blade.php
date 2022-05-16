@@ -8,6 +8,7 @@
                         <th>#</th>
                         <th>{{ __('Name') }}</th>
                         <th>{{ __('Email') }}</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -16,6 +17,7 @@
                             <td>{{ $teacher->id }}</td>
                             <td>{{ $teacher->user->name }}</td>
                             <td>{{ $teacher->user->email }}</td>
+                            <td><a href="{{ route('teachers.edit', $teacher->id) }}"><i class="icon-pen"></i></a></td>
                         </tr>
                     @endforeach
                 </tbody>
