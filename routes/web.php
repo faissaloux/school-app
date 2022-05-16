@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BusController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ParentController;
 use App\Http\Controllers\TeacherController;
@@ -21,5 +22,9 @@ Route::middleware(['web', 'auth'])->group(function() {
         Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
         Route::post('/store', 'store')->name('store');
+    });
+
+    Route::controller(BusController::class)->prefix('/buses')->as('buses.')->group(function() {
+        Route::get('/create', 'create')->name('create');
     });
 });
