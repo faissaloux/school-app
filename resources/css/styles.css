@@ -6449,3 +6449,6 @@ li.plupload_droptext {
   }
 }
 
+.select2-hidden-accessible {
+  display: none;
+}

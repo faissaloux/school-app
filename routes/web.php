@@ -3,6 +3,7 @@
 use App\Http\Controllers\BusController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ParentController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,5 +29,9 @@ Route::middleware(['web', 'auth'])->group(function() {
         Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
         Route::post('/store', 'store')->name('store');
+    });
+
+    Route::controller(StudentController::class)->prefix('/students')->as('students.')->group(function() {
+        Route::get('/create', 'create')->name('create');
     });
 });
