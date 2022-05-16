@@ -4,5 +4,18 @@
     "Password": "Password",
     "Forgot password?": "Forgot password?",
     "Remember me": "Remember me",
-    "Sign in": "Sign in"
+    "Sign in": "Sign in",
+    "Dashboard": "Dashboard",
+    "Teachers": "Teachers",
+    "List teachers": "List teachers",
+    "Add new teacher": "Add new teacher",
+    "Parents": "Parents",
+    "List parents": "List parents",
+    "Add new parent": "Add new parent",
+    "Students": "Students",
+    "List students": "List students",
+    "Add new student": "Add new student",
+    "Buses": "Buses",
+    "List buses": "List buses",
+    "Add new bus": "Add new bus"
 }

@@ -1318,10 +1318,6 @@ body.boxed {
   margin-left: 79px;
 }
 
-.sidebar-hidden .page-content {
-  /*margin: 0 25px!important;*/
-}
-
 .full-width .page-content {
   margin: 0 25px;
 }
