@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreParentRequest;
 use App\Jobs\CreateParent;
+use App\Models\Parents;
 
 class ParentController extends Controller
 {
     public function index()
     {
-        return view('parents.index');
+        $parents = Parents::get();
+
+        return view('parents.index', compact('parents'));
     }
 
     public function create()
