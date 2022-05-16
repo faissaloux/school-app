@@ -29,7 +29,7 @@
                 <a href="#"><span>{{ __('Parents') }}</span> <i class="icon-user3"></i></a>
                 <ul>
                     <li><a href="form_components.html">{{ __('Parents list') }}</a></li>
-                    <li><a href="form_layouts.html">{{ __('Add new parent') }}</a></li>
+                    <li><a href="{{ route('parents.create') }}">{{ __('Add new parent') }}</a></li>
                 </ul>
             </li>
             <li>
