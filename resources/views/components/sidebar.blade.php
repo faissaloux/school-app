@@ -35,7 +35,7 @@
             <li>
                 <a href="#"><span>{{ __('Students') }}</span> <i class="icon-users"></i></a>
                 <ul>
-                    <li><a href="form_components.html">{{ __('Students list') }}</a></li>
+                    <li><a href="{{ route('students.index') }}">{{ __('Students list') }}</a></li>
                     <li><a href="{{ route('students.create') }}">{{ __('Add new student') }}</a></li>
                 </ul>
             </li>
