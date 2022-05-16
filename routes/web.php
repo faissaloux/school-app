@@ -33,6 +33,8 @@ Route::middleware(['web', 'auth'])->group(function() {
         Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
         Route::post('/store', 'store')->name('store');
+        Route::get('/edit/{bus}', 'edit')->name('edit');
+        Route::post('/update/{bus}', 'update')->name('update');
     });
 
     Route::controller(StudentController::class)->prefix('/students')->as('students.')->group(function() {
