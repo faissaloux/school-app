@@ -32,5 +32,11 @@
     "Update teacher": "Update teacher",
     "Update parent": "Update parent",
     "Update bus": "Update bus",
-    "Update student": "Update student"
+    "Update student": "Update student",
+    "Back": "Back",
+    "- Oops, an error has occurred. Forbidden! -": "- Oops, an error has occurred. Forbidden! -",
+    "- Oops, an error has occurred. Page not found! -": "- Oops, an error has occurred. Page not found! -",
+    "- Oops, an error has occurred. Not allowed! -": "- Oops, an error has occurred. Not allowed! -",
+    "- Oops, an error has occurred. Internal server error! -": "- Oops, an error has occurred. Internal server error! -",
+    "- Oops, an error has occurred. Service unavailable! -": "- Oops, an error has occurred. Service unavailable! -"
 }
