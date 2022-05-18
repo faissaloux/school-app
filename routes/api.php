@@ -22,6 +22,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::controller(TripStatusController::class)->prefix('/trip-status')->as('trip_status.')->group(function() {
             Route::post('/start/{bus}', 'start')->name('start');
             Route::post('/store', 'store')->name('store');
+            Route::post('/end/{bus}', 'end')->name('end');
         });
     });
 });

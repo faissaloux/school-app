@@ -10,4 +10,5 @@ abstract class TripStatuses
     const SCHOOL = 'school';
     const TO_HOME = 'to_home';
     const HOME = 'home';
+    const FINISH = 'finish';
 }

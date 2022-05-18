@@ -26,5 +26,6 @@ class TripStatus extends Model
         TripStatuses::SCHOOL,
         TripStatuses::TO_HOME,
         TripStatuses::HOME,
+        TripStatuses::FINISH,
     ];
 }

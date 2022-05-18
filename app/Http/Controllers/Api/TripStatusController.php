@@ -25,4 +25,14 @@ class TripStatusController extends Controller
 
         return response()->success('trip_status.created');
     }
+
+    public function end(Bus $bus) {
+        $bus->students->each(function($student) {
+            $student->tripsStatuses()->create([
+                'status' => end(TripStatus::$statuses),
+            ]);
+        });
+
+        return response()->success('trip_status.finished');
+    }
 }
