@@ -26,4 +26,9 @@ class Student extends Model
     {
         return $this->belongsTo(Bus::class);
     }
+
+    public function tripsStatuses()
+    {
+        return $this->hasMany(TripStatus::class);
+    }
 }

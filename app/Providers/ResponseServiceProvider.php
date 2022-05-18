@@ -13,7 +13,7 @@ class ResponseServiceProvider extends ServiceProvider
         {
             $format = [
                 'status' => 'error',
-                'message' => $message ?? trans('responses.errors.something_went_wrong'),
+                'message' => $message ? trans($message) : trans('responses.errors.something_went_wrong'),
                 'details' => $details,
             ];
             
@@ -24,7 +24,7 @@ class ResponseServiceProvider extends ServiceProvider
         {
             $format = [
                 'status' => 'success',
-                'message' => $message,
+                'message' => trans($message),
             ];
             
             return $factory->make($format);
@@ -44,7 +44,7 @@ class ResponseServiceProvider extends ServiceProvider
         {
             $format = [
                 'status' => 'error',
-                'message' => $message ?? trans('responses.errors.something_went_wrong'),
+                'message' => $message ? trans($message) : trans('responses.errors.something_went_wrong'),
             ];
             
             return $factory->make($format);
@@ -54,7 +54,7 @@ class ResponseServiceProvider extends ServiceProvider
         {
             $format = [
                 'status' => 'success',
-                'message' => $message,
+                'message' => trans($message),
                 'data' => $data,
             ];
             
