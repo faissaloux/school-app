@@ -12,7 +12,7 @@ Route::middleware(['web', 'guest'])->group(function() {
 });
 Auth::routes(['register' => false]);
 
-Route::middleware(['web', 'auth'])->group(function() {
+Route::middleware(['web', 'auth', 'role:admin'])->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::controller(TeacherController::class)->prefix('/teachers')->as('teachers.')->group(function() {
