@@ -19,4 +19,9 @@ class Bus extends Model
     {
         return $this->belongsTo(Teacher::class);
     }
+
+    public function students()
+    {
+        return $this->hasMany(Student::class);
+    }
 }

@@ -19,4 +19,9 @@ class Teacher extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function buses()
+    {
+        return $this->hasMany(Bus::class);
+    }
 }
