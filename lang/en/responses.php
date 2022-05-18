@@ -4,6 +4,7 @@ return [
     'errors' => [
         'something_went_wrong' => 'something went wrong!',
         'wrong_credentials' => 'wrong credentials!',
+        'not_found' => 'not found!',
     ],
     'success' => [
         'user' => [
