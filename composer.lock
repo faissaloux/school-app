@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "194ab33d52d7beaa60937e7e3117c0b6",
+    "content-hash": "55c0e7e8c8b21681291c06f06b304733",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3118,28 +3118,27 @@
         },
         {
             "name": "spatie/laravel-fractal",
-            "version": "6.0.2",
+            "version": "5.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-fractal.git",
-                "reference": "1e6b8114389fe8e55eec3a841db02c404458f869"
+                "reference": "be3ccd54e26742cd05b3637fb732fd9addfa28df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-fractal/zipball/1e6b8114389fe8e55eec3a841db02c404458f869",
-                "reference": "1e6b8114389fe8e55eec3a841db02c404458f869",
+                "url": "https://api.github.com/repos/spatie/laravel-fractal/zipball/be3ccd54e26742cd05b3637fb732fd9addfa28df",
+                "reference": "be3ccd54e26742cd05b3637fb732fd9addfa28df",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "^8.0|^9.0",
-                "illuminate/support": "^8.0|^9.0",
-                "php": "^8.0",
-                "spatie/fractalistic": "^2.5",
-                "spatie/laravel-package-tools": "^1.11"
+                "illuminate/contracts": "^7.0|^8.0",
+                "illuminate/support": "^7.0|^8.0",
+                "php": "^7.2|^8.0",
+                "spatie/fractalistic": "^2.5"
             },
             "require-dev": {
                 "ext-json": "*",
-                "orchestra/testbench": "^7.0"
+                "orchestra/testbench": "^5.0|^6.0"
             },
             "type": "library",
             "extra": {
@@ -3148,7 +3147,7 @@
                         "Spatie\\Fractal\\FractalServiceProvider"
                     ],
                     "aliases": {
-                        "Fractal": "Spatie\\Fractal\\Facades\\Fractal"
+                        "Fractal": "Spatie\\Fractal\\FractalFacade"
                     }
                 }
             },
@@ -3185,7 +3184,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-fractal/issues",
-                "source": "https://github.com/spatie/laravel-fractal/tree/6.0.2"
+                "source": "https://github.com/spatie/laravel-fractal/tree/5.8.1"
             },
             "funding": [
                 {
@@ -3193,66 +3192,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-04-04T07:53:13+00:00"
-        },
-        {
-            "name": "spatie/laravel-package-tools",
-            "version": "1.11.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-package-tools.git",
-                "reference": "baeb3df0ebb3a541394fdaf8cbe6115bf4034a59"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/baeb3df0ebb3a541394fdaf8cbe6115bf4034a59",
-                "reference": "baeb3df0ebb3a541394fdaf8cbe6115bf4034a59",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^7.0|^8.0|^9.0",
-                "php": "^7.4|^8.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.4",
-                "orchestra/testbench": "^5.0|^6.23|^7.0",
-                "phpunit/phpunit": "^9.4",
-                "spatie/test-time": "^1.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\LaravelPackageTools\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Tools for creating Laravel packages",
-            "homepage": "https://github.com/spatie/laravel-package-tools",
-            "keywords": [
-                "laravel-package-tools",
-                "spatie"
-            ],
-            "support": {
-                "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.11.3"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/spatie",
-                    "type": "github"
-                }
-            ],
-            "time": "2022-03-15T20:01:36+00:00"
+            "time": "2020-11-12T18:46:53+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
