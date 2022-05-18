@@ -7,7 +7,9 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'auth.login');
+Route::middleware(['web', 'guest'])->group(function() {
+    Route::view('/', 'auth.login');
+});
 Auth::routes(['register' => false]);
 
 Route::middleware(['web', 'auth'])->group(function() {
