@@ -15,7 +15,7 @@ class CreateBusesTable extends Migration
     {
         Schema::create('buses', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('teacher_id')->constrained();
+            $table->foreignId('teacher_id')->constrained()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

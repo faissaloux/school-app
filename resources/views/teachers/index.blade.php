@@ -17,7 +17,21 @@
                             <td>{{ $teacher->id }}</td>
                             <td>{{ $teacher->name }}</td>
                             <td>{{ $teacher->email }}</td>
-                            <td><a href="{{ route('teachers.edit', $teacher->id) }}"><i class="icon-pen"></i></a></td>
+                            <td class="col-md-2 align-items-center">
+                                <a href="{{ route('teachers.edit', $teacher->id) }}" class="col-md-2" style="line-height:30px;">
+                                    <i class="icon-pen"></i>
+                                </a>
+                                <a class="col-md-2 deleteTeacher" style="line-height:30px;">
+                                    <i class="icon-remove text-danger"></i>
+                                </a>
+                                <form action="{{ route('teachers.delete', $teacher->id) }}" method="POST" class="confirmDeletion">
+                                    @csrf
+
+                                    <button class="col-md-4 btn btn-danger">
+                                        {{ __('Confirm') }}
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

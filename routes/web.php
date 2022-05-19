@@ -21,6 +21,7 @@ Route::middleware(['web', 'auth', 'role:admin'])->group(function() {
         Route::post('/store', 'store')->name('store');
         Route::get('/edit/{teacher}', 'edit')->name('edit');
         Route::post('/update/{teacher}', 'update')->name('update');
+        Route::post('/delete/{teacher}', 'delete')->name('delete');
     });
 
     Route::controller(ParentController::class)->prefix('/parents')->as('parents.')->group(function() {

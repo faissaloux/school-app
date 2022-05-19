@@ -44,5 +44,8 @@
     "On trip": "On trip",
     "Off trip": "Off trip",
     "Trip status": "Trip status",
-    "Student name": "Student name"
+    "Student name": "Student name",
+    "Not selected": "Not selected",
+    "Without teacher": "Without teacher",
+    "Assign teacher": "Assign teacher"
 }

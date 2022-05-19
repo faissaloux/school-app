@@ -10,6 +10,7 @@
                         <div class="form-group">
                             <label>{{ __('Teachers') }}:</label>
                             <select data-placeholder="{{ __('Choose a teacher') }}" class="required select-full" name="teacher_id" tabindex="2">
+                                <option value="">{{ __('Not selected') }}</option>
                                 @foreach ($teachers as $teacher)
                                     <option
                                         value="{{ $teacher->id }}"

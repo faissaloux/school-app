@@ -20,7 +20,11 @@
 								{{ $bus->onTrip() ? __('On trip') : __('Off trip') }}
 							</span>
 						</div>
-						<a href="{{ route('teachers.edit', $bus->teacher_id) }}">{{ $bus->teacher->name }}</a>
+						@isset ($bus->teacher_id)
+							<a href="{{ route('teachers.edit', $bus->teacher_id) }}">{{ $bus->teacher->name }}</a>
+						@else
+							( {{ __('Without teacher') }} ) <a href="{{ route('buses.edit', $bus->id) }}">{{ __('Assign teacher') }}</a>
+						@endisset
 					</div>
 				</li>
 			@endforeach

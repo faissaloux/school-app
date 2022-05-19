@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreTeacherRequest;
 use App\Http\Requests\UpdateTeacherRequest;
 use App\Jobs\CreateTeacher;
+use App\Jobs\DeleteTeacher;
 use App\Jobs\UpdateTeacher;
 use App\Models\Teacher;
 
@@ -41,6 +42,15 @@ class TeacherController extends Controller
         $this->dispatchSync(UpdateTeacher::fromRequest($teacher, $request));
 
         $this->success('teacher.updated');
+
+        return redirect()->route('teachers.index');
+    }
+
+    public function delete(Teacher $teacher)
+    {
+        $this->dispatchSync(new DeleteTeacher($teacher));
+
+        $this->success('teacher.deleted');
 
         return redirect()->route('teachers.index');
     }

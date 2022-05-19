@@ -6449,6 +6449,7 @@ li.plupload_droptext {
   }
 }
 
-.select2-hidden-accessible {
+.select2-hidden-accessible,
+.confirmDeletion {
   display: none;
 }
