@@ -11,7 +11,7 @@
                             <label>{{ __('Teachers') }}:</label>
                             <select data-placeholder="{{ __('Choose a teacher') }}" class="required select-full" name="teacher_id" tabindex="2">
                                 @foreach ($teachers as $teacher)
-                                    <option value="{{ $teacher->id }}">{{ $teacher->user->name }}</option>
+                                    <option value="{{ $teacher->id }}">{{ $teacher->name }}</option>
                                 @endforeach
                             </select>
                         </div>

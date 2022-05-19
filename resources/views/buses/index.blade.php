@@ -16,8 +16,8 @@
                     @foreach ($buses as $bus)
                         <tr>
                             <td>{{ $bus->id }}</td>
-                            <td>{{ $bus->teacher->user->name }}</td>
-                            <td>{{ $bus->teacher->user->email }}</td>
+                            <td>{{ $bus->teacher->name }}</td>
+                            <td>{{ $bus->teacher->email }}</td>
                             <td>{{ $bus->students->count() }}</td>
                             <td><a href="{{ route('buses.edit', $bus->id) }}"><i class="icon-pen"></i></a></td>
                         </tr>

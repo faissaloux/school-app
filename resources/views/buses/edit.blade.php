@@ -15,7 +15,7 @@
                                         value="{{ $teacher->id }}"
                                         {{ $bus->teacher_id == $teacher->id ? 'selected' : '' }}
                                     >
-                                        {{ $teacher->user->name }}
+                                        {{ $teacher->name }}
                                     </option>
                                 @endforeach
                             </select>

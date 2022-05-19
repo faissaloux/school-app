@@ -1,16 +1,5 @@
 <div class="sidebar">
     <div class="sidebar-content">
-
-        <div class="user-menu dropdown">
-            <a href="#">
-                <div class="user-info">
-                    {{ auth()->user()->name }} <span>{{ auth()->user()->role }}</span>
-                </div>
-            </a>
-        </div>
-
-
-        <!-- Main navigation -->
         <ul class="navigation">
             <li class="active">
                 <a href="{{ route('dashboard') }}">
@@ -47,7 +36,5 @@
                 </ul>
             </li>
         </ul>
-        <!-- /main navigation -->
-        
     </div>
 </div>

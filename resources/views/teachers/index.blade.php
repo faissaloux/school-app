@@ -15,8 +15,8 @@
                     @foreach ($teachers as $teacher)
                         <tr>
                             <td>{{ $teacher->id }}</td>
-                            <td>{{ $teacher->user->name }}</td>
-                            <td>{{ $teacher->user->email }}</td>
+                            <td>{{ $teacher->name }}</td>
+                            <td>{{ $teacher->email }}</td>
                             <td><a href="{{ route('teachers.edit', $teacher->id) }}"><i class="icon-pen"></i></a></td>
                         </tr>
                     @endforeach

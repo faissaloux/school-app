@@ -9,13 +9,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>{{ __('Name') }}:</label>
-                            <input type="text" name="name" placeholder="{{ __('Name') }}" class="form-control" value="{{ $teacher->user->name }}">
+                            <input type="text" name="name" placeholder="{{ __('Name') }}" class="form-control" value="{{ $teacher->name }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>{{ __('Email') }}:</label>
-                            <input type="email" name="email" placeholder="{{ __('Email') }}" class="form-control" value="{{ $teacher->user->email }}">
+                            <input type="email" name="email" placeholder="{{ __('Email') }}" class="form-control" value="{{ $teacher->email }}">
                         </div>
                     </div>
                 </div>

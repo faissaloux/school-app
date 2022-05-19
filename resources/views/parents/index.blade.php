@@ -15,8 +15,8 @@
                     @foreach ($parents as $parent)
                         <tr>
                             <td>{{ $parent->id }}</td>
-                            <td>{{ $parent->user->name }}</td>
-                            <td>{{ $parent->user->email }}</td>
+                            <td>{{ $parent->name }}</td>
+                            <td>{{ $parent->email }}</td>
                             <td><a href="{{ route('parents.edit', $parent->id) }}"><i class="icon-pen"></i></a></td>
                         </tr>
                     @endforeach

@@ -39,5 +39,8 @@
     "- Oops, an error has occurred. Not allowed! -": "- Oops, an error has occurred. Not allowed! -",
     "- Oops, an error has occurred. Internal server error! -": "- Oops, an error has occurred. Internal server error! -",
     "- Oops, an error has occurred. Service unavailable! -": "- Oops, an error has occurred. Service unavailable! -",
-    "Students count": "Students count"
+    "Students count": "Students count",
+    "Recent activity": "Recent activity",
+    "On trip": "On trip",
+    "Off trip": "Off trip"
 }

@@ -21,7 +21,7 @@
                                         value="{{ $parent->id }}"
                                         {{ $student->parent_id == $parent->id ? 'selected' : '' }}
                                     >
-                                        {{ $parent->user->name }}
+                                        {{ $parent->name }}
                                     </option>
                                 @endforeach
                             </select>
@@ -39,7 +39,7 @@
                                         value="{{ $bus->id }}"
                                         {{ $student->bus_id == $bus->id ? 'selected' : '' }}
                                     >
-                                        {{ $bus->teacher->user->name }}
+                                        {{ $bus->teacher->name }}
                                     </option>
                                 @endforeach
                             </select>

@@ -28,4 +28,9 @@ class TripStatus extends Model
         TripStatuses::HOME,
         TripStatuses::FINISH,
     ];
+
+    public function student()
+    {
+        return $this->belongsTo(Student::class);
+    }
 }

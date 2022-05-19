@@ -17,7 +17,7 @@
                             <label>{{ __('Parent') }}:</label>
                             <select data-placeholder="{{ __('Choose a parent') }}" class="required select-full" name="parent_id" tabindex="2">
                                 @foreach ($parents as $parent)
-                                    <option value="{{ $parent->id }}">{{ $parent->user->name }}</option>
+                                    <option value="{{ $parent->id }}">{{ $parent->name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -30,7 +30,7 @@
                             <label>{{ __('Bus') }}:</label>
                             <select data-placeholder="{{ __('Choose a bus') }}" class="required select-full" name="bus_id" tabindex="2">
                                 @foreach ($buses as $bus)
-                                    <option value="{{ $bus->id }}">{{ $bus->teacher->user->name }}</option>
+                                    <option value="{{ $bus->id }}">{{ $bus->teacher->name }}</option>
                                 @endforeach
                             </select>
                         </div>

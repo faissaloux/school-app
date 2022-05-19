@@ -49,4 +49,11 @@ class BusController extends Controller
 
         return redirect()->route('buses.index');
     }
+
+    public function students(Bus $bus)
+    {
+        $students = $bus->students;
+
+        return view('buses.students', compact('students', 'bus'));
+    }
 }

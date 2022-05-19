@@ -1,6 +1,6 @@
 <x-app-layout>
-    <div class="panel panel-default">
-        <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i>{{ __('Students list') }}</h6></div>
+	<div class="block">
+		<h6 class="heading-hr"><i class="icon-file"></i>{{ __('Bus') }} {{ $bus->id }}</h6>
         <div class="datatable">
             <table class="table">
                 <thead>
@@ -25,5 +25,5 @@
                 </tbody>
             </table>
         </div>
-    </div>
+	</div>
 </x-app-layout>
