@@ -19,7 +19,21 @@
                             <td>{{ $bus->teacher->name ?? '-' }}</td>
                             <td>{{ $bus->teacher->email ?? '-' }}</td>
                             <td>{{ $bus->students->count() }}</td>
-                            <td><a href="{{ route('buses.edit', $bus->id) }}"><i class="icon-pen"></i></a></td>
+                            <td>
+                                <a href="{{ route('buses.edit', $bus->id) }}" class="col-md-2" style="line-height:30px;">
+                                    <i class="icon-pen"></i>
+                                </a>
+                                <a class="col-md-2 delete" style="line-height:30px;">
+                                    <i class="icon-remove text-danger"></i>
+                                </a>
+                                <form action="{{ route('buses.delete', $bus->id) }}" method="POST" class="confirmDeletion">
+                                    @csrf
+
+                                    <button class="col-md-4 btn btn-danger">
+                                        {{ __('Confirm') }}
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

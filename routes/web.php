@@ -39,6 +39,7 @@ Route::middleware(['web', 'auth', 'role:admin'])->group(function() {
         Route::post('/store', 'store')->name('store');
         Route::get('/edit/{bus}', 'edit')->name('edit');
         Route::post('/update/{bus}', 'update')->name('update');
+        Route::post('/delete/{bus}', 'delete')->name('delete');
         Route::get('/students/{bus}', 'students')->name('students');
     });
 

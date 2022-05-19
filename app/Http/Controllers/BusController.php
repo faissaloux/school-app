@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreBusRequest;
 use App\Http\Requests\UpdateBusRequest;
 use App\Jobs\CreateBus;
+use App\Jobs\DeleteBus;
 use App\Jobs\UpdateBus;
 use App\Models\Bus;
 use App\Models\Teacher;
@@ -55,5 +56,14 @@ class BusController extends Controller
         $students = $bus->students;
 
         return view('buses.students', compact('students', 'bus'));
+    }
+
+    public function delete(Bus $bus)
+    {
+        $this->dispatchSync(new DeleteBus($bus));
+
+        $this->success('bus.deleted');
+
+        return redirect()->route('buses.index');
     }
 }
