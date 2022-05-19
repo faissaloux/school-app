@@ -40,6 +40,6 @@ class Bus extends Model
             $finished += optional($student->tripsStatuses->first())->status == TripStatuses::FINISH ? 1 : 0;
         }
 
-        return $studentsCount > 0 && $studentsCount == $finished;
+        return !$studentsCount || ( $studentsCount > 0 && $finished > 0 && $studentsCount == $finished );
     }
 }
