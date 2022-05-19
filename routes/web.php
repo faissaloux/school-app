@@ -30,6 +30,7 @@ Route::middleware(['web', 'auth', 'role:admin'])->group(function() {
         Route::post('/store', 'store')->name('store');
         Route::get('/edit/{parent}', 'edit')->name('edit');
         Route::post('/update/{parent}', 'update')->name('update');
+        Route::post('/delete/{parent}', 'delete')->name('delete');
     });
 
     Route::controller(BusController::class)->prefix('/buses')->as('buses.')->group(function() {

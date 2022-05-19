@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreParentRequest;
 use App\Http\Requests\UpdateParentRequest;
 use App\Jobs\CreateParent;
+use App\Jobs\DeleteParent;
 use App\Jobs\UpdateParent;
 use App\Models\Parents;
 
@@ -41,6 +42,15 @@ class ParentController extends Controller
         $this->dispatchSync(UpdateParent::fromRequest($parent, $request));
 
         $this->success('parent.updated');
+
+        return redirect()->route('parents.index');
+    }
+
+    public function delete(Parents $parent)
+    {
+        $this->dispatchSync(new DeleteParent($parent));
+
+        $this->success('parent.deleted');
 
         return redirect()->route('parents.index');
     }

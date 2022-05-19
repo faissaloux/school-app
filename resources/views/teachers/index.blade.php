@@ -21,7 +21,7 @@
                                 <a href="{{ route('teachers.edit', $teacher->id) }}" class="col-md-2" style="line-height:30px;">
                                     <i class="icon-pen"></i>
                                 </a>
-                                <a class="col-md-2 deleteTeacher" style="line-height:30px;">
+                                <a class="col-md-2 delete" style="line-height:30px;">
                                     <i class="icon-remove text-danger"></i>
                                 </a>
                                 <form action="{{ route('teachers.delete', $teacher->id) }}" method="POST" class="confirmDeletion">
