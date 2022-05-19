@@ -31,6 +31,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::middleware(['role:' . Roles::PARENT])->group(function() {
         Route::controller(ParentController::class)->group(function() {
             Route::get('/get-children', 'getChildren')->name('get_children');
+            Route::get('/get-statuses/{student}', 'getStatuses')->name('get_statuses');
         });
     });
 });
