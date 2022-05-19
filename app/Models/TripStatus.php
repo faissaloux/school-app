@@ -33,4 +33,14 @@ class TripStatus extends Model
     {
         return $this->belongsTo(Student::class);
     }
+
+    public function onTrip()
+    {
+        return !$this->offTrip();
+    }
+
+    public function offTrip()
+    {
+       return $this->status == TripStatuses::FINISH;
+    }
 }
