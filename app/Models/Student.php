@@ -29,6 +29,6 @@ class Student extends Model
 
     public function tripsStatuses()
     {
-        return $this->hasMany(TripStatus::class);
+        return $this->hasMany(TripStatus::class)->orderBy('created_at', 'DESC');
     }
 }
