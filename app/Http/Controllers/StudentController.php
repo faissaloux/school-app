@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreStudentRequest;
 use App\Http\Requests\UpdateStudentRequest;
 use App\Jobs\CreateStudent;
+use App\Jobs\DeleteStudent;
 use App\Jobs\UpdateStudent;
 use App\Models\Bus;
 use App\Models\Parents;
@@ -49,6 +50,15 @@ class StudentController extends Controller
         $this->dispatchSync(UpdateStudent::fromRequest($student, $request));
 
         $this->success('student.updated');
+
+        return redirect()->route('students.index');
+    }
+
+    public function delete(Student $student)
+    {
+        $this->dispatchSync(new DeleteStudent($student));
+
+        $this->success('student.deleted');
 
         return redirect()->route('students.index');
     }

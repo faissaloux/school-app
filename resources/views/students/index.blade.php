@@ -19,7 +19,21 @@
                             <td>{{ $student->name }}</td>
                             <td>{{ $student->parent->name }}</td>
                             <td>{{ $student->bus->teacher->name }}</td>
-                            <td><a href="{{ route('students.edit', $student->id) }}"><i class="icon-pen"></i></a></td>
+                            <td>
+                                <a href="{{ route('students.edit', $student->id) }}" class="col-md-2" style="line-height:30px;">
+                                    <i class="icon-pen"></i>
+                                </a>
+                                <a class="col-md-2 delete" style="line-height:30px;">
+                                    <i class="icon-remove text-danger"></i>
+                                </a>
+                                <form action="{{ route('students.delete', $student->id) }}" method="POST" class="confirmDeletion">
+                                    @csrf
+
+                                    <button class="col-md-4 btn btn-danger">
+                                        {{ __('Confirm') }}
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

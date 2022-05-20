@@ -49,5 +49,6 @@ Route::middleware(['web', 'auth', 'role:admin'])->group(function() {
         Route::post('/store', 'store')->name('store');
         Route::get('/edit/{student}', 'edit')->name('edit');
         Route::post('/update/{student}', 'update')->name('update');
+        Route::post('/delete/{student}', 'delete')->name('delete');
     });
 });
