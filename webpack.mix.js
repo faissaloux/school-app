@@ -18,5 +18,4 @@ mix.js('resources/js/app.js', 'public/js')
         'resources/css/bootstrap.min.css',
         'resources/css/londinium-theme.css',
         'resources/css/styles.css',
-        'resources/css/icons.css',
     ], 'public/css/app.css');

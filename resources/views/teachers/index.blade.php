@@ -1,6 +1,11 @@
 <x-app-layout>
     <div class="panel panel-default">
-        <div class="panel-heading"><h6 class="panel-title"><i class="icon-table"></i>{{ __('Teachers list') }}</h6></div>
+        <div class="panel-heading">
+            <h6 class="panel-title">
+                <i class="fa-solid fa-table-cells"></i>
+                {{ __('Teachers list') }}
+            </h6>
+        </div>
         <div class="datatable">
             <table class="table">
                 <thead>

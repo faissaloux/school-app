@@ -48,14 +48,14 @@
         <div class="navbar navbar-inverse" role="navigation">
             <div class="navbar-header">
                 <a class="navbar-brand" href="{{ route('dashboard') }}"><img src="images/logo.png" alt="Londinium"></a>
-                <a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+                <a class="sidebar-toggle"><i class="fa-solid fa-bars"></i></a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-icons">
                     <span class="sr-only">Toggle navbar</span>
                     <i class="icon-grid3"></i>
                 </button>
                 <button type="button" class="navbar-toggle offcanvas">
                     <span class="sr-only">Toggle navigation</span>
-                    <i class="icon-paragraph-justify2"></i>
+                    <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
 
@@ -74,7 +74,7 @@
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();"
                             >
-                                <i class="icon-exit"></i>{{ __('Logout') }}
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>{{ __('Logout') }}
                             </a>
         
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

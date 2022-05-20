@@ -1,6 +1,6 @@
 <x-app-layout>
 	<div class="block">
-		<h6 class="heading-hr"><i class="icon-tab"></i>{{ __('Bus') }} {{ $bus->id }}</h6>
+		<h6 class="heading-hr"><i class="fa-solid fa-bus"></i>{{ __('Bus') }} {{ $bus->id }}</h6>
         <div class="datatable">
             <table class="table">
                 <thead>

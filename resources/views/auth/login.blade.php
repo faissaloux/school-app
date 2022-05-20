@@ -20,7 +20,7 @@
                         autocomplete="email"
                         autofocus
                     >
-                    <i class="icon-users form-control-feedback"></i>
+                    <i class="fa-solid fa-user-group form-control-feedback"></i>
                     @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -39,7 +39,7 @@
                         required
                         autocomplete="current-password"
                     >
-                    <i class="icon-lock form-control-feedback"></i>
+                    <i class="fa-solid fa-lock form-control-feedback"></i>
                     @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
