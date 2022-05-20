@@ -26,10 +26,10 @@
                             <td>{{ $student->bus->teacher->name }}</td>
                             <td>
                                 <a href="{{ route('students.edit', $student->id) }}" class="col-md-2" style="line-height:30px;">
-                                    <i class="icon-pen"></i>
+                                    <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
                                 <a class="col-md-2 delete" style="line-height:30px;">
-                                    <i class="icon-remove text-danger"></i>
+                                    <i class="fa-solid fa-trash-can text-danger"></i>
                                 </a>
                                 <form action="{{ route('students.delete', $student->id) }}" method="POST" class="confirmDeletion">
                                     @csrf

@@ -24,10 +24,10 @@
                             <td>{{ $teacher->email }}</td>
                             <td class="col-md-2 align-items-center">
                                 <a href="{{ route('teachers.edit', $teacher->id) }}" class="col-md-2" style="line-height:30px;">
-                                    <i class="icon-pen"></i>
+                                    <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
                                 <a class="col-md-2 delete" style="line-height:30px;">
-                                    <i class="icon-remove text-danger"></i>
+                                    <i class="fa-solid fa-trash-can text-danger"></i>
                                 </a>
                                 <form action="{{ route('teachers.delete', $teacher->id) }}" method="POST" class="confirmDeletion">
                                     @csrf
